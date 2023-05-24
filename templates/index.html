@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>(EMSI) Temperature Monitor</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+</head>
+<body>
+    <div class="card">
+        <img id="weather-image" src="" alt="Weather Image">
+        <div class="container">
+            <h2><span id="temperature"></span></h2>
+            <p><span id="datetime"></span></p>
+            <h3 class="animate-charcter">Made by: Ziad-Khalil-Zakaria</h3>
+            <h2 id="apitemp"></h2>
+            <h1>Current Temperature: {{ temperature }}°C</h1>
+            <p>Click the button to view the chart.</p>
+            <a href="/chart">View Chart</a>
+            <button class="button" onclick="window.location.href='https://ziadpsycho.space'">Ziad's Website</button>
+            
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
